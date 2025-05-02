@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <!-- Tambahkan ini di dalam <head> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" type="text/css" href="https://cdn.prinsh.com/NathanPrinsley-textstyle/nprinsh-stext.css"/>
+
+  <meta charset="UTF-8">
+  <title>welcome</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #111;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .intro-text {
+      opacity: 0;
+      font-size: 40px;
+      font-weight: 800;
+      transition: opacity 1s ease-in-out;
+    }
+    
+    .loading-text {
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .show {
+      opacity: 1;
+    }
+
+    .loading-text {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+    }
+
+    .spinner {
+      width: 16px;
+      height: 16px;
+      border: 3px solid rgba(255,255,255,0.3);
+      border-top: 3px solid #00d8ff;
+      border-radius: 50%;
+      margin-right: 10px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0%   { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .snowflake {
+      position: absolute;
+      top: -40px;
+      font-size: 24px;
+      color: #ffffff;
+      opacity: 0.9;
+      animation-name: fall;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    
+  </style>
+</head>
+<body>
+  <!-- Ikon sosial media sebagai snowflake -->
+  <i class="fab fa-tiktok snowflake" style="left: 10%; animation-duration: 12s; animation-delay: 0s;"></i>
+  <i class="fab fa-skype snowflake" style="left: 25%; animation-duration: 14s; animation-delay: 2s;"></i>
+  <i class="fab fa-instagram snowflake" style="left: 40%; animation-duration: 10s; animation-delay: 1s;"></i>
+  <i class="fab fa-facebook-f snowflake" style="left: 55%; animation-duration: 11s; animation-delay: 3s;"></i>
+  <i class="fab fa-youtube snowflake" style="left: 70%; animation-duration: 13s; animation-delay: 0.5s;"></i>
+  <i class="fab fa-whatsapp snowflake" style="left: 85%; animation-duration: 9s; animation-delay: 1.5s;"></i>
+  
+
+  <div class="intro-text" id="intro"><span class="nprinsley-text-rainbowan">Selamat Datang</span></div>
+  <div class="loading-text" id="loading">
+    <div class="spinner"></div>
+    <span>Menunggu akses masuk ...</span>
+  </div>
+
+  <script>
+    // Tampilkan teks intro setelah 0.5 detik
+    setTimeout(() => {
+      document.getElementById('intro').classList.add('show');
+    }, 500);
+
+    // Tampilkan teks loading setelah 2.5 detik
+    setTimeout(() => {
+      document.getElementById('loading').classList.add('show');
+    }, 2500);
+  </script>
+  
+    <script>
+    // Arahkan ke website utama setelah 4 detik
+    setTimeout(function() {
+      window.location.href = "https://example.com"; // Ganti dengan URL tujuanmu
+    }, 10000);
+  </script>
+
+</body>
+</html>
